@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Bolso de Eletrônica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Manual de Bolso de Eletrônica</h1>
+            <p>Um guia rápido sobre componentes e procedimentos básicos.</p>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#gnd">Teste de GND</a></li>
+                <li><a href="#fusivel">Fusível</a></li>
+                <li><a href="#indutor">Indutor</a></li>
+                <li><a href="#transformador">Transformador</a></li>
+                <li><a href="#resistor">Resistor</a></li>
+                <li><a href="#diodo">Diodo</a></li>
+                <li><a href="#capacitor">Capacitor</a></li>
+                <li><a href="#regulador">Regulador de Tensão</a></li>
+                <li><a href="#dissipador">Dissipador</a></li>
+                <li><a href="#varistor">Varistor</a></li>
+                <li><a href="#fusistor">Fusistor</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="gnd" class="componente">
+                <h2>Teste de GND (Aterramento)</h2>
+                <p><strong>O que é?</strong> Um procedimento para verificar se a conexão de aterramento de um
+                    equipamento está funcionando. O GND é o ponto de referência zero volts de um circuito, essencial
+                    para a segurança e estabilidade.</p>
+                <p><strong>Para que serve?</strong> Para garantir a segurança contra choques elétricos e proteger os
+                    componentes eletrônicos contra descargas e ruídos.</p>
+                <p><strong>Como executar?</strong> Com o equipamento desligado, use um multímetro em modo de
+                    continuidade. Teste a continuidade entre o pino de terra do plugue e a carcaça metálica do aparelho.
+                    Um bipe contínuo indica que a conexão está OK.</p>
+            </section>
+
+            <section id="fusivel" class="componente">
+                <h2>Fusível</h2>
+                <img src="img/fusivel.jfif" alt="Fusível de vidro">
+                <p><strong>O que é?</strong> Um dispositivo de segurança que protege circuitos contra sobrecorrente.</p>
+                <p><strong>Como funciona?</strong> Possui um filamento metálico que se derrete e rompe (queima) quando a
+                    corrente elétrica ultrapassa o limite especificado, abrindo o circuito.</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">F</span></p>
+            </section>
+
+            <section id="indutor" class="componente">
+                <h2>Indutor</h2>
+                <img src="img/indutor.jfif" alt="Indutor axial">
+                <p><strong>O que é?</strong> Um componente passivo que armazena energia em um campo magnético.
+                    Geralmente é uma bobina de fio.</p>
+                <p><strong>Para que serve?</strong> Usado em filtros para bloquear ruídos, em fontes chaveadas para
+                    armazenar energia e em circuitos de rádiofrequência.</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">L</span></p>
+            </section>
+
+            <section id="transformador" class="componente">
+                <h2>Transformador</h2>
+                <img src="img/transformador.jfif" alt="Transformador pequeno">
+                <p><strong>O que é?</strong> Um dispositivo que transfere energia elétrica, geralmente alterando o nível
+                    de tensão (aumentando ou diminuindo).</p>
+                <p><strong>Como funciona?</strong> Usa o princípio da indução magnética entre duas ou mais bobinas para
+                    alterar a tensão AC.</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">T</span></p>
+            </section>
+
+            <section id="resistor" class="componente">
+                <h2>Resistor</h2>
+                <img src="img/resistor.jfif" alt="Resistores">
+                <p><strong>O que é?</strong> Um componente que se opõe à passagem de corrente elétrica.</p>
+                <p><strong>Para que serve?</strong> Limitar a corrente, dividir níveis de tensão. Seu valor é medido em
+                    Ohms (Ω) e é identificado por faixas coloridas.</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">R</span></p>
+            </section>
+
+            <section id="diodo" class="componente">
+                <h2>Diodo</h2>
+                <img src="img/diodo.jfif" alt="Diodo retificador">
+                <p><strong>O que é?</strong> Um semicondutor que atua como uma "rua de mão única", permitindo que a
+                    corrente flua em uma só direção.</p>
+                <p><strong>Para que serve?</strong> Principalmente para retificar corrente (converter AC em DC) e para
+                    proteção de circuitos.</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">D</span> (Uma faixa no corpo
+                    indica o catodo (-)).</p>
+            </section>
+
+            <section id="capacitor" class="componente">
+                <h2>Capacitor</h2>
+                <img src="img/CapacitordeEstabilizacao.jfif" alt="Capacitores eletrolíticos">
+                <p><strong>O que é?</strong> Um componente que armazena energia em um campo elétrico. Os de
+                    estabilização servem para "limpar" a tensão.</p>
+                <p><strong>Para que serve?</strong> Filtra ruídos e ondulações (ripple) na fonte de alimentação,
+                    fornecendo uma tensão mais estável.</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">C</span></p>
+            </section>
+
+            <section id="regulador" class="componente">
+                <h2>Regulador de Tensão</h2>
+                <img src="img/regulador de tensao.jfif" alt="Regulador de tensão 7805">
+                <p><strong>O que é?</strong> Um circuito integrado (CI) que fornece uma tensão de saída constante e
+                    estável a partir de uma entrada mais alta.</p>
+                <p><strong>Para que serve?</strong> Alimentar componentes sensíveis que exigem uma tensão específica e
+                    limpa para funcionar (ex: 5V, 3.3V).</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">IC</span>, <span
+                        class="identificador">U</span> ou <span class="identificador">REG</span></p>
+            </section>
+
+            <section id="dissipador" class="componente">
+                <h2>Dissipador de Calor</h2>
+                <img src="img/dissipador.jfif" alt="Dissipador de alumínio">
+                <p><strong>O que é?</strong> Uma peça de metal com aletas, projetada para transferir o calor de um
+                    componente para o ar.</p>
+                <p><strong>Para que serve?</strong> Resfriar componentes que geram muito calor, como processadores e
+                    reguladores de tensão, evitando que superaqueçam.</p>
+                <p><strong>Identificação na placa:</strong> Nenhuma (é um componente mecânico).</p>
+            </section>
+
+            <section id="varistor" class="componente">
+                <h2>Varistor</h2>
+                <img src="img/varistor.jfif" alt="Varistores">
+                <p><strong>O que é?</strong> Um resistor cuja resistência varia com a tensão. Também conhecido como MOV
+                    (Metal Oxide Varistor).</p>
+                <p><strong>Para que serve?</strong> Proteger circuitos contra picos de alta tensão (surtos), desviando o
+                    excesso de energia para o terra.</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">RV</span> ou <span
+                        class="identificador">MOV</span></p>
+            </section>
+
+            <section id="fusistor" class="componente">
+                <h2>Fusistor (Resistor Fusível)</h2>
+                <img src="img/fusistor.jfif" alt="Fusistor">
+                <p><strong>O que é?</strong> Um componente híbrido que funciona como resistor em condições normais e
+                    como fusível em sobrecarga.</p>
+                <p><strong>Como funciona?</strong> Limita a corrente (resistor) e se queima para abrir o circuito quando
+                    a corrente excede o limite (fusível).</p>
+                <p><strong>Identificação na placa:</strong> <span class="identificador">FR</span></p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Desenvolvido por Gilvan Daniel da Silva. Conecte-se comigo!</p>
+            <div class="social-links">
+                <a href="https://github.com/GilvanDnel" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/gilvan-daniel-da-silva-b52637114/" target="_blank">LinkedIn</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

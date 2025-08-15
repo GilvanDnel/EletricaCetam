@@ -1,0 +1,166 @@
+/* --- Variáveis de Cor (Tema 1: Moderno & Tecnológico / Dark Mode) --- */
+:root {
+    --cor-fundo: #1a1a1a;               /* Grafite escuro para o fundo */
+    --cor-fundo-card: #2c2c2c;          /* Cinza um pouco mais claro para os cards */
+    --cor-texto-principal: #f0f0f0;     /* Cinza muito claro (quase branco) para textos principais */
+    --cor-texto-secundario: #a0a0a0;    /* Cinza médio para textos de descrição e parágrafos */
+    --cor-destaque: #00e5ff;            /* Ciano elétrico para links, títulos e botões */
+    --cor-destaque-hover: #00b8d4;      /* Ciano mais escuro para o efeito hover */
+    --cor-borda: #444444;               /* Cor sutil para bordas */
+    --sombra-card: 0 4px 15px rgba(0,0,0,0.2); /* Sombra mais visível no tema escuro */
+}
+
+/* --- Estilos Gerais do Corpo --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7; /* Aumentei um pouco para mais "respiro" na leitura */
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-secundario); /* Cor padrão para parágrafos */
+    transition: background-color 0.3s;
+}
+
+/* --- Estilo do Container Principal --- */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+/* --- Estilo do Cabeçalho --- */
+header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+header h1 {
+    color: var(--cor-texto-principal); /* Título principal com mais destaque */
+}
+
+/* --- Estilo da Navegação --- */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px; /* Adicionei uma margem para separar do header */
+}
+
+nav li {
+    margin: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+    background-color: transparent; /* Fundo transparente */
+    border: 1px solid var(--cor-destaque); /* Apenas borda na cor de destaque */
+    padding: 8px 15px;
+    border-radius: 50px; /* Botões em formato de "pílula" */
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+/* Efeito Hover para os Botões da Navegação */
+nav a:hover {
+    background-color: var(--cor-destaque); /* Preenche o fundo ao passar o mouse */
+    color: var(--cor-fundo);               /* Texto fica com a cor do fundo */
+    box-shadow: 0 0 15px var(--cor-destaque); /* Efeito de "brilho" (glow) */
+}
+
+/* --- Estilo dos Cards de Componentes --- */
+.componente {
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px;
+    box-shadow: var(--sombra-card);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.componente:hover {
+    border-color: var(--cor-destaque); /* Borda do card muda de cor no hover */
+    transform: translateY(-5px);       /* Levanta o card sutilmente */
+}
+
+.componente h2 {
+    margin-top: 0;
+    color: var(--cor-destaque);
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 10px;
+}
+
+.componente strong {
+    color: var(--cor-texto-principal); /* Deixa os "O que é?" mais destacados */
+}
+
+/* Estilo das imagens dentro dos cards */
+.componente img {
+    max-width: 150px;
+    height: auto;
+    float: right;
+    margin: 0 0 15px 20px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-borda);
+    transition: all 0.3s ease;
+}
+
+/* Efeito Hover para as Imagens */
+.componente img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5); /* Sombra com brilho ciano */
+}
+
+/* Estilo da "tag" de identificação (R, C, L...) */
+.identificador {
+    display: inline-block;
+    background-color: var(--cor-fundo); /* Fundo igual ao da página */
+    border: 1px solid var(--cor-borda);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 1.1em;
+    color: var(--cor-destaque); /* Texto na cor de destaque */
+}
+
+/* --- ESTILOS DO NOVO RODAPÉ --- */
+footer {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 40px;
+    border-top: 1px solid var(--cor-borda);
+    color: var(--cor-texto-secundario);
+}
+
+.social-links a {
+    color: var(--cor-destaque);
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--cor-destaque-hover);
+    text-decoration: underline;
+}
+
+
+/* --- Estilos para Telas Pequenas (Responsividade) --- */
+@media (max-width: 600px) {
+    .componente img {
+        float: none;
+        display: block;
+        margin: 20px auto;
+    }
+
+    nav ul {
+        flex-direction: column; /* Botões ficam em coluna */
+        align-items: center;    /* Centraliza os botões na coluna */
+    }
+}
