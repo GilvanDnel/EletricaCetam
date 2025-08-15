@@ -1,23 +1,23 @@
 /* --- Variáveis de Cor (Tema 1: Moderno & Tecnológico / Dark Mode) --- */
 :root {
-    --cor-fundo: #1a1a1a;               /* Grafite escuro para o fundo */
-    --cor-fundo-card: #2c2c2c;          /* Cinza um pouco mais claro para os cards */
-    --cor-texto-principal: #f0f0f0;     /* Cinza muito claro (quase branco) para textos principais */
-    --cor-texto-secundario: #a0a0a0;    /* Cinza médio para textos de descrição e parágrafos */
-    --cor-destaque: #00e5ff;            /* Ciano elétrico para links, títulos e botões */
-    --cor-destaque-hover: #00b8d4;      /* Ciano mais escuro para o efeito hover */
-    --cor-borda: #444444;               /* Cor sutil para bordas */
-    --sombra-card: 0 4px 15px rgba(0,0,0,0.2); /* Sombra mais visível no tema escuro */
+    --cor-fundo: #1a1a1a;
+    --cor-fundo-card: #2c2c2c;
+    --cor-texto-principal: #f0f0f0;
+    --cor-texto-secundario: #a0a0a0;
+    --cor-destaque: #00e5ff;
+    --cor-destaque-hover: #00b8d4;
+    --cor-borda: #444444;
+    --sombra-card: 0 4px 15px rgba(0,0,0,0.2);
 }
 
 /* --- Estilos Gerais do Corpo --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.7; /* Aumentei um pouco para mais "respiro" na leitura */
+    line-height: 1.7;
     margin: 0;
     padding: 0;
     background-color: var(--cor-fundo);
-    color: var(--cor-texto-secundario); /* Cor padrão para parágrafos */
+    color: var(--cor-texto-secundario);
     transition: background-color 0.3s;
 }
 
@@ -36,40 +36,94 @@ header {
 }
 
 header h1 {
-    color: var(--cor-texto-principal); /* Título principal com mais destaque */
+    color: var(--cor-texto-principal);
 }
 
+/* --- Estilos da Barra de Busca --- */
+.search-container {
+    margin: 20px 0;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 50px;
+    color: var(--cor-texto-principal);
+    font-size: 1em;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+#search-input::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+#search-input:focus {
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 10px var(--cor-destaque);
+}
+
+
 /* --- Estilo da Navegação --- */
-nav ul {
+.navbar {
+    position: relative;
+    margin-top: 20px;
+}
+
+.nav-links {
     list-style-type: none;
     padding: 0;
+    margin: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 20px; /* Adicionei uma margem para separar do header */
 }
 
-nav li {
+.nav-links li {
     margin: 5px;
 }
 
-nav a {
+.nav-links a {
     text-decoration: none;
     color: var(--cor-destaque);
-    background-color: transparent; /* Fundo transparente */
-    border: 1px solid var(--cor-destaque); /* Apenas borda na cor de destaque */
+    background-color: transparent;
+    border: 1px solid var(--cor-destaque);
     padding: 8px 15px;
-    border-radius: 50px; /* Botões em formato de "pílula" */
+    border-radius: 50px;
     transition: all 0.3s ease;
     font-weight: 500;
+    display: block;
 }
 
-/* Efeito Hover para os Botões da Navegação */
-nav a:hover {
-    background-color: var(--cor-destaque); /* Preenche o fundo ao passar o mouse */
-    color: var(--cor-fundo);               /* Texto fica com a cor do fundo */
-    box-shadow: 0 0 15px var(--cor-destaque); /* Efeito de "brilho" (glow) */
+.nav-links a:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    box-shadow: 0 0 15px var(--cor-destaque);
 }
+
+/* --- Estilos do Menu Hambúrguer --- */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: -15px;
+    right: 5px;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--cor-destaque);
+    transition: all 0.3s ease-in-out;
+}
+
 
 /* --- Estilo dos Cards de Componentes --- */
 .componente {
@@ -84,8 +138,8 @@ nav a:hover {
 }
 
 .componente:hover {
-    border-color: var(--cor-destaque); /* Borda do card muda de cor no hover */
-    transform: translateY(-5px);       /* Levanta o card sutilmente */
+    border-color: var(--cor-destaque);
+    transform: translateY(-5px);
 }
 
 .componente h2 {
@@ -95,11 +149,11 @@ nav a:hover {
     padding-bottom: 10px;
 }
 
+/* O texto dos parágrafos agora é alinhado à esquerda por padrão, o que é melhor para leitura */
 .componente strong {
-    color: var(--cor-texto-principal); /* Deixa os "O que é?" mais destacados */
+    color: var(--cor-texto-principal);
 }
 
-/* Estilo das imagens dentro dos cards */
 .componente img {
     max-width: 150px;
     height: auto;
@@ -110,25 +164,23 @@ nav a:hover {
     transition: all 0.3s ease;
 }
 
-/* Efeito Hover para as Imagens */
 .componente img:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5); /* Sombra com brilho ciano */
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.5);
 }
 
-/* Estilo da "tag" de identificação (R, C, L...) */
 .identificador {
     display: inline-block;
-    background-color: var(--cor-fundo); /* Fundo igual ao da página */
+    background-color: var(--cor-fundo);
     border: 1px solid var(--cor-borda);
     padding: 3px 8px;
     border-radius: 4px;
     font-family: "Courier New", Courier, monospace;
     font-size: 1.1em;
-    color: var(--cor-destaque); /* Texto na cor de destaque */
+    color: var(--cor-destaque);
 }
 
-/* --- ESTILOS DO NOVO RODAPÉ --- */
+/* --- Estilos do Rodapé --- */
 footer {
     text-align: center;
     padding: 25px 0;
@@ -152,15 +204,43 @@ footer {
 
 
 /* --- Estilos para Telas Pequenas (Responsividade) --- */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--cor-fundo-card);
+        border-radius: 8px;
+        margin-top: 15px;
+        padding: 10px 0;
+        box-shadow: var(--sombra-card);
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .nav-links li {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .nav-links a {
+        width: 90%;
+        margin: 5px auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    
     .componente img {
         float: none;
         display: block;
         margin: 20px auto;
-    }
-
-    nav ul {
-        flex-direction: column; /* Botões ficam em coluna */
-        align-items: center;    /* Centraliza os botões na coluna */
     }
 }
